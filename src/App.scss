@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: normal;
+  list-style: none;
+}
+
+body {
+  background-color: rgba(245, 247, 251, 1);
+  font-family: "Inter", sans-serif;
+}
+
+hr {
+  border: 1px solid rgba(219, 222, 240, 1);
+  margin: 1.25rem 0;
+}
+
+.App {
+  width: 44.375rem;
+  height: 44.375rem;
+  margin: 0 auto;
+}
+
+.quiz {
+  width: 44rem;
+  margin: 2rem auto;
+
+  h2 {
+    font-weight: bold;
+    color: rgba(41, 50, 100, 1);
+    font-size: 1.4rem;
+  }
+
+  .quiz--item {
+    margin: 1rem 0;
+  }
+
+  .quiz--item-options {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    .quiz--item-option {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+
+  border: 1.5px solid rgba(77, 91, 158, 1);
+  border-radius: 0.8rem;
+
+  color: rgba(41, 50, 100, 1);
+  background-color: rgba(245, 247, 251, 1);
+
+  &.selected {
+    background-color: rgba(214, 219, 245, 1);
+    border-color: rgba(214, 219, 245, 1);
+  }
+
+  &.correct {
+    background-color: rgba(148, 215, 162, 1);
+    border-color: rgba(148, 215, 162, 1);
+    color: rgba(41, 50, 100, 1);
+  }
+
+  &.wrong {
+    background-color: rgba(248, 188, 188, 0.5);
+    border-color: rgba(248, 188, 188, 0.5);
+    color: rgba(41, 50, 100, 0.5);
+  }
+
+  &.disabled {
+    color: rgba(41, 50, 100, 0.5);
+    background-color: rgba(245, 247, 251, 0.5);
+    border: 1.5px solid rgba(77, 91, 158, 0.5);
+  }
+}
