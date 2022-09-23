@@ -55,6 +55,51 @@ button {
   cursor: pointer;
 }
 
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  height: 100vh;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(41, 50, 100, 1);
+  }
+
+  p {
+    color: rgba(41, 50, 100, 1);
+  }
+
+  .landing-start-quiz {
+    padding: 1rem 3rem;
+  }
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.submit-button {
+  background-color: rgba(77, 91, 158, 1);
+  border-radius: 0.625rem;
+  color: rgba(245, 247, 251, 1);
+
+  &.quiz-button {
+    padding: 1rem 1.4rem;
+  }
+
+  &.center {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .button {
   padding: 0.5rem 1rem;
 

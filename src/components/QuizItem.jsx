@@ -13,9 +13,7 @@ const QuizItem = ({ answers, question, questionIndex, handleAnswerClick }) => {
           <button
             key={ans.answerId}
             id={ans.answerId}
-            className={`quiz--item-option button ${
-              ans.isSelected ? "selected" : ""
-            }`}
+            className={`quiz--item-option button ${ans.buttonStateClass}`}
             dangerouslySetInnerHTML={{ __html: ans.value }}
             onClick={() => handleAnswerClick(questionIndex, index)}
           ></button>

@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 
 function App() {
   const [questions, setQuestions] = useState([]);
+  const [startQuiz, setStartQuiz] = useState(false);
 
   // to fetch questions only once
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
               answerId: nanoid(),
               value: ans,
               isSelected: false,
+              buttonStateClass: "",
             })),
           };
         });
@@ -46,7 +48,20 @@ function App() {
 
   return (
     <div className="App">
-      <Quiz questions={questions} />
+      {startQuiz === true ? (
+        <Quiz questions={questions} />
+      ) : (
+        <div className="landing">
+          <h2 className="landing-heading">Quizzical</h2>
+          <p className="landing-subtitle">some desc if needed lol</p>
+          <button
+            className="submit-button landing-start-quiz"
+            onClick={() => setStartQuiz(true)}
+          >
+            Start quiz
+          </button>
+        </div>
+      )}
     </div>
   );
 }
